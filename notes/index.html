@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes Widget</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div onclick="noteMaker()" class="add-note" draggable="true">
+      <p>➕ Add Note</p>
+    </div>
+    <div id="noteMakerContainer">
+      <div class="container">
+        <div class="container-header">
+          <input
+            type="text"
+            class="edit-note-title"
+            id="note-title"
+            placeholder="Title (Optional)"
+          />
+          <p onclick="closeButton()" id="closeButton" class="close-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+          </p>
+        </div>
+        <textarea
+          id="note-text"
+          placeholder="Write your note here..."
+        ></textarea>
+        <div class="container-footer">
+          <button type="button" onclick="addNote()">Add Note</button>
+          <div class="note-color">
+            <p>Note Color:</p>
+            <input placeholder="color" type="color" name="" id="colorPicker" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul id="note-list"></ul>
+    <script src="script.js"></script>
+  </body>
+</html>
